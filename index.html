@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biotec Scientifique - Matériel de laboratoire professionnel</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        min-height: 100vh;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header styles */
+      header {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .top-bar {
+        background: linear-gradient(90deg, #e0f2fe 0%, #bae6fd 100%);
+        padding: 12px 0;
+        font-size: 14px;
+        color: #075985;
+      }
+
+      .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .contact-info {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+      }
+
+      .contact-info a {
+        color: #075985;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .language-btn {
+        background: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: #075985;
+        padding: 6px 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+      }
+
+      .language-btn.active {
+        background: rgba(255, 255, 255, 0.5);
+        color: #0284c7;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      }
+
+      .main-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+      }
+
+      .logo {
+        font-size: 32px;
+        font-weight: 800;
+        background: linear-gradient(90deg, #0891b2 0%, #0e7490 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -1px;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+      }
+
+      .nav-menu a {
+        color: #333;
+        font-weight: 600;
+        font-size: 17px;
+        position: relative;
+        padding: 8px 0;
+        transition: all 0.3s ease;
+      }
+
+      .nav-menu a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #0891b2 0%, #0e7490 100%);
+        border-radius: 3px;
+        transition: width 0.3s ease;
+      }
+
+      .nav-menu a:hover {
+        color: #0891b2;
+      }
+
+      .nav-menu a:hover::before {
+        width: 100%;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #0891b2;
+      }
+
+      /* Hero section */
+      .hero {
+        position: relative;
+        height: 700px;
+        overflow: hidden;
+        margin-bottom: 80px;
+      }
+
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(224, 242, 254, 0.8) 100%
+          ),
+          url('https://ueuromed.org/sites/default/files/2023-08/5.jpg')
+            center/cover no-repeat;
+        z-index: 1;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at center,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.8) 70%,
+          rgba(255, 255, 255, 0.9) 100%
+        );
+        z-index: 2;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+      .hero-text {
+        max-width: 700px;
+      }
+
+      .hero-title {
+        font-size: 56px;
+        font-weight: 800;
+        color: #0891b2;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-subtitle {
+        font-size: 22px;
+        color: #555;
+        margin-bottom: 40px;
+        font-weight: 500;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #0891b2 0%, #0e7490 100%);
+        color: white;
+        padding: 18px 40px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 600;
+        box-shadow: 0 8px 25px rgba(8, 145, 178, 0.3);
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(8, 145, 178, 0.4);
+      }
+
+      /* Categories Grid */
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 42px;
+        color: #0891b2;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+      }
+
+      .section-title h2::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 5px;
+        background: linear-gradient(90deg, #0891b2 0%, #0e7490 100%);
+        border-radius: 3px;
+      }
+
+      .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+
+      .category-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .category-card:hover {
+        transform: translateY(-15px) rotate(1deg);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .category-image {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .category-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .category-card:hover .category-image img {
+        transform: scale(1.1);
+      }
+
+      .category-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to top,
+          rgba(8, 145, 178, 0.8) 0%,
+          rgba(8, 145, 178, 0.2) 100%
+        );
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+      }
+
+      .category-name {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .category-info {
+        padding: 30px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .category-info h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .category-description {
+        color: #666;
+        margin-bottom: 25px;
+        line-height: 1.6;
+        flex-grow: 1;
+      }
+
+      .subcategory-count {
+        font-size: 14px;
+        color: #0891b2;
+        font-weight: 600;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .view-products {
+        color: #0891b2;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        font-size: 16px;
+        margin-top: auto;
+      }
+
+      .view-products:hover {
+        color: #0e7490;
+        transform: translateX(5px);
+      }
+
+      /* Partners Section */
+      .partners-section {
+        padding: 80px 0;
+        background: white;
+        margin-top: -40px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .partners-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .partners-title h2 {
+        font-size: 36px;
+        color: #0891b2;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+      }
+
+      .partners-title h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #0891b2 0%, #0e7490 100%);
+        border-radius: 2px;
+      }
+
+      .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .partner-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+      }
+
+      .partner-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .partner-logo {
+        max-width: 100%;
+        max-height: 80px;
+        object-fit: contain;
+        filter: grayscale(100%) contrast(0.8);
+        transition: filter 0.3s ease;
+      }
+
+      .partner-card:hover .partner-logo {
+        filter: grayscale(0%) contrast(1);
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+        color: white;
+        padding: 60px 0 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+      }
+
+      .footer-column h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+      }
+
+      .footer-column h3::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: #a5f3fc;
+      }
+
+      .footer-contact-list {
+        list-style: none;
+      }
+
+      .footer-contact-list li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .footer-contact-list svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        color: #a5f3fc;
+      }
+
+      .footer-map {
+        height: 200px;
+        background: #0891b2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .copyright {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 14px;
+        opacity: 0.9;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Responsive design */
+      @media (max-width: 992px) {
+        .hero-title {
+          font-size: 48px;
+        }
+
+        .hero-subtitle {
+          font-size: 20px;
+        }
+
+        .section-title h2 {
+          font-size: 36px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .top-bar {
+          font-size: 13px;
+          padding: 10px 0;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 8px;
+          text-align: center;
+        }
+
+        .language-switcher {
+          margin-top: 10px;
+        }
+
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(255, 255, 255, 0.98);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          gap: 15px;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .hero {
+          height: 600px;
+        }
+
+        .hero-title {
+          font-size: 36px;
+        }
+
+        .hero-subtitle {
+          font-size: 18px;
+        }
+
+        .section {
+          padding: 80px 0;
+        }
+
+        .categories-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-title {
+          font-size: 32px;
+        }
+
+        .hero-subtitle {
+          font-size: 16px;
+        }
+
+        .section-title h2 {
+          font-size: 32px;
+        }
+
+        .partners-grid {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="top-bar">
+        <div class="container top-bar-content">
+          <div class="contact-info">
+            <a href="tel:+33123456789">
+              <svg
+                width="18"
+                height="18"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.48.445-.687.974-.45 1.378l.762 1.332c.227.395.147.832-.192.987l-1.3 1.3c-.374.374-.613.85-.664 1.371l-.03.252a.678.678 0 0 0 .894.894l2-.333c.52-.05.997-.289 1.371-.663l1.3-1.3c.155-.339.592-.419.987-.192l1.332.762c.404.237.933.03 1.378-.45l1.035-1.035a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L3.654 1.328z"
+                />
+                <path
+                  d="M10.682 2.318A4.99 4.99 0 0 0 8 0c-2.76 0-5 2.24-5 5 0 .83.239 1.614.678 2.28L2.14 8.82c-.258.47-.284 1.06-.069 1.57C2.294 10.89 2.884 11.48 3.394 11.704c.51.219 1.1.193 1.57-.069l1.54-1.54c.666.439 1.45.678 2.28.678 2.76 0 5-2.24 5-5 0-1.378-.556-2.648-1.508-3.544L10.682 2.318z"
+                />
+                <path
+                  d="M8 3a5 5 0 0 0-4.546 2.916l-.04.118-.017.05a4.991 4.991 0 0 0 9.192.05l-.017-.05-.04-.118A5 5 0 0 0 8 3z"
+                />
+              </svg>
+              +33 1 23 45 67 89
+            </a>
+            <a href="mailto:contact@biotec-scientifique.fr">
+              <svg
+                width="18"
+                height="18"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.417A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-3.417L1 4.82v6.294z"
+                />
+              </svg>
+              contact@biotec-scientifique.ma
+            </a>
+          </div>
+          <div class="language-switcher">
+            <span>Langue:</span>
+            <button class="language-btn active">FR</button>
+            <button class="language-btn">EN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container main-nav">
+        <div class="logo">Biotec<span>Scientifique</span></div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="pages/presentation.html">Présentation</a></li>
+          <li><a href="pages/produits.html">Nos Produits</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Matériel de laboratoire scientifique de précision
+          </h1>
+          <p class="hero-subtitle">
+            Votre partenaire de confiance pour les consommables et équipements
+            de laboratoire haut de gamme, conçus pour la recherche biomédicale
+            avancée et l'analyse scientifique.
+          </p>
+          <a href="#" class="cta-button">Explorer notre catalogue</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nos Catégories Principales</h2>
+        </div>
+        <div class="categories-grid">
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://corway.ru/wp-content/uploads/2024/05/7i1b7978-scaled.jpg"
+                alt="Tubes sous vide"
+              />
+              <div class="category-overlay">
+                <div class="category-name">TUBES SOUS VIDE</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Tubes sous vide</h3>
+              <p class="category-description">
+                Gamme complète de tubes à vide pour prélèvement sanguin avec
+                différentes compositions chimiques pour tous types d'analyses.
+              </p>
+              <div class="subcategory-count">✓ 3 marques disponibles</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://atlas-medical.com/upload/Infectious%20Disease%20Rapid%20Test.jpg"
+                alt="Tests rapides et réactifs"
+              />
+              <div class="category-overlay">
+                <div class="category-name">TESTS RAPIDES ET RÉACTIFS</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Tests rapides et réactifs</h3>
+              <p class="category-description">
+                Solutions diagnostiques rapides et réactifs de haute qualité
+                pour une détection fiable et précise des pathologies.
+              </p>
+              <div class="subcategory-count">✓ 5 marques disponibles</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://nexusdiagnostics.ma/cdn/shop/files/CC-BGR-A-B-D-AB-AHG_662867f1-21f0-4f4d-93d8-125068ebce8f.jpg?v=1716060984"
+                alt="Groupage sanguin"
+              />
+              <div class="category-overlay">
+                <div class="category-name">GROUPAGE SANGUIN</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Groupage sanguin</h3>
+              <p class="category-description">
+                Kits complets et réactifs pour la détermination du groupe
+                sanguin ABO et du facteur Rhésus avec précision maximale.
+              </p>
+              <div class="subcategory-count">✓ 3 marques disponibles</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://www.mls.be/media/b7/14/6e/1733164585/019388a8d329711fa8188286012f6622b252Fd252Fd252Fd252Fbddd14518b5caf5d3517e4709539a1e151ec5548_ZR361560_0000_1.jpg"
+                alt="Coloration"
+              />
+              <div class="category-overlay">
+                <div class="category-name">COLORATION</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Coloration</h3>
+              <p class="category-description">
+                Réactifs de coloration histologique et cytologique de haute
+                pureté pour une visualisation optimale des échantillons.
+              </p>
+              <div class="subcategory-count">✓ 2 marques disponibles</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://marketing.webassets.siemens-healthineers.com/1800000007294156/918a57faaff5/v/0f6ffc6650b3/Siemens-Healthineers-Hemostasis-Antithrombin-Assay-Kit.jpg"
+                alt="Hémostase"
+              />
+              <div class="category-overlay">
+                <div class="category-name">HEMOSTASE</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Hémostase</h3>
+              <p class="category-description">
+                Systèmes complets et réactifs pour l'évaluation de la fonction
+                plaquettaire et des facteurs de coagulation.
+              </p>
+              <div class="subcategory-count">✓ 2 marques disponibles</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://vevor-goods.vevor.net/product/SDKDSYYQZZBDDJILS/micropipette-m100-1.2.jpg?x-oss-process=image/format,webp"
+                alt="Micro-pipettes"
+              />
+              <div class="category-overlay">
+                <div class="category-name">MICROPIPETTES</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Micro-pipettes</h3>
+              <p class="category-description">
+                Gamme professionnelle de pipettes manuelles et électroniques
+                pour un pipetage précis et ergonomique en laboratoire.
+              </p>
+              <div class="subcategory-count">✓ 3 marques disponibles</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://www.curtec.com/uploads/Markets/Cell-culture-media/Cell-culture-media-in-petri-dish-800.jpg"
+                alt="Milieux de culture"
+              />
+              <div class="category-overlay">
+                <div class="category-name">MILIEUX DE CULTURE</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Milieux de culture</h3>
+              <p class="category-description">
+                Milieux de culture sélectifs et différentiels de haute qualité
+                pour l'isolement et l'identification des micro-organismes.
+              </p>
+              <div class="subcategory-count">✓ 1 marque disponible</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://www.sarlsaica.com/wp-content/uploads/2024/05/439282622_7517956524960666_2586511749191821892_n-1.jpg"
+                alt="Petit matériel"
+              />
+              <div class="category-overlay">
+                <div class="category-name">PETIT MATERIEL</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Petit matériel</h3>
+              <p class="category-description">
+                Équipement essentiel de laboratoire incluant agitateurs,
+                centrifugeuses, bains thermostatisés et autres instruments.
+              </p>
+              <div class="subcategory-count">✓ Plusieurs références</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://i0.wp.com/materiellaboratoire.tn/wp-content/uploads/2025/04/Consommable-de-laboratoire-tunisie.jpg?fit=800%2C800&ssl=1?v=1744635116"
+                alt="Consommable"
+              />
+              <div class="category-overlay">
+                <div class="category-name">CONSOMMABLE</div>
+              </div>
+            </div>
+            <div class="category-info">
+              <h3>Consommable</h3>
+              <p class="category-description">
+                Large gamme de consommables de laboratoire : pointes de
+                pipettes, tubes, microplaque, cuves, etc.
+              </p>
+              <div class="subcategory-count">✓ Large sélection</div>
+              <a href="#" class="view-products">Voir les produits →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+      <div class="container">
+        <div class="partners-title">
+          <h2>Nos Partenaires</h2>
+        </div>
+        <div class="partners-grid">
+          <div class="partner-card">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D560BAQHHK2mgbWlQ1Q/company-logo_200_200/company-logo_200_200/0/1719138452356/bbmaxlee_logo?e=2147483647&v=beta&t=wl2ukiJHhn9ZNAq2tGkAwCs7BRcuf72ltaVZMmg9bts"
+              alt="Vacutte"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.sdbiosensor.com/assets/images/logo.png"
+              alt="SD Biosensor"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.dialab.com/images/logo.png"
+              alt="Dialab"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.lorne.co.uk/wp-content/uploads/2020/07/Lorne-Laboratories-Logo.png"
+              alt="Lorne Laboratories"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.fortressdiagnostics.com/wp-content/uploads/2020/06/Fortress-Diagnostics-Logo.png"
+              alt="Fortress Diagnostics"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.dragonlab.com/upload/image/202107/1625182375525475.png"
+              alt="Dragon Lab"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.onilab.com/images/logo.png"
+              alt="Onilab"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://accumaxindia.com/wp-content/uploads/2020/07/Accumax-Logo.png"
+              alt="Accumax"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.biokar.com/sites/default/files/styles/full_width/public/2021-11/Biokar_Logo.png"
+              alt="Biokar"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.ral.fr/wp-content/uploads/2020/05/RAL-Logo.png"
+              alt="RAL"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.stago.com/wp-content/themes/stago/img/logo-stago.svg"
+              alt="Stago"
+              class="partner-logo"
+            />
+          </div>
+          <div class="partner-card">
+            <img
+              src="https://www.biolabo.fr/wp-content/uploads/2020/07/Biolabo-Logo.png"
+              alt="Biolabo"
+              class="partner-logo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>À propos</h3>
+            <p style="margin-bottom: 20px; color: #a5f3fc">
+              Biotec Scientifique est votre partenaire de confiance pour le
+              matériel de laboratoire professionnel depuis 1995, offrant des
+              solutions de haute qualité pour la recherche biomédicale et
+              l'analyse scientifique.
+            </p>
+            <div style="display: flex; gap: 15px">
+              <a href="#" style="color: #a5f3fc; font-size: 20px">📧</a>
+              <a href="#" style="color: #a5f3fc; font-size: 20px">📱</a>
+              <a href="#" style="color: #a5f3fc; font-size: 20px">🌐</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <ul class="footer-contact-list">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <div><strong>Tél:</strong> 0666979824 - 0603379870</div>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <div>
+                  <strong>Email:</strong> contact@biotec-scientifique.ma<br />
+                  commercial@biotec-scientifique.ma<br />
+                  comptable@biotec-scientifique.ma
+                </div>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M17.657 16.657L13.414 20.9a1.995 1.995 0 01-2.828 0l-4.244-4.244a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <div>
+                  <strong>Siege Social:</strong> Magasin 2, Rce Ilyasse, Rue
+                  Méditerranéenne, Lot Riyad, Narjiss Route Sefrou Fès.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Localisation</h3>
+            <div class="footer-map">Carte Google Maps</div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          © 2024 Biotec Scientifique S.A.R.L. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navMenu = document.querySelector('.nav-menu');
+
+      mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+
+      // Language switcher
+      const languageBtns = document.querySelectorAll('.language-btn');
+      languageBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          languageBtns.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Biotec Scientifique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root{--primary:#0891b2;--primary-dark:#0e7490;--text:#1f2937;--muted:#6b7280;--bg:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%)}
+      *{box-sizing:border-box;margin:0;padding:0}
+      body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+      a{text-decoration:none;color:inherit}
+      .container{max-width:1200px;margin:0 auto;padding:0 20px}
+      header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 4px 30px rgba(0,0,0,.06)}
+      .top{background:linear-gradient(90deg,#e0f2fe,#bae6fd);color:#075985;font-size:14px}
+      .top .inner{display:flex;justify-content:space-between;align-items:center;padding:10px 0;gap:20px;flex-wrap:wrap}
+      .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:26px;background:linear-gradient(90deg,var(--primary),var(--primary-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+      nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+      .menu{list-style:none;display:flex;gap:28px}
+      .menu a{font-weight:600;position:relative;padding:8px 0}
+      .menu a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--primary),var(--primary-dark));border-radius:3px;transition:width .25s ease}
+      .menu a:hover{color:var(--primary)}
+      .menu a:hover::after{width:100%}
+      .hero{padding:72px 0 48px;background:radial-gradient(1000px 300px at 50% -50%, rgba(8,145,178,.15), transparent),#fff}
+      .hero h1{font-size:42px;color:var(--primary);font-weight:800;margin-bottom:12px}
+      .hero p{font-size:18px;color:var(--muted)}
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin:30px 0}
+      .card{background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:22px;border:1px solid rgba(255,255,255,.6)}
+      .badge{display:inline-block;background:rgba(8,145,178,.1);color:var(--primary);font-weight:700;font-size:12px;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+      .section{padding:30px 0}
+      .lead{font-size:20px;color:#374151}
+      .cta{display:inline-block;margin-top:10px;background:linear-gradient(90deg,var(--primary),var(--primary-dark));color:#fff;padding:12px 16px;border:none;border-radius:12px;font-weight:700}
+      footer{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;margin-top:60px}
+      .footer-inner{padding:50px 0}
+      .copyright{border-top:1px solid rgba(255,255,255,.25);text-align:center;padding:16px 0;opacity:.9;font-size:14px}
+      @media (max-width:768px){.menu{display:none}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div class="container inner">
+          <div>📞 0666979824 · 0603379870</div>
+          <div>✉️ contact@biotec-scientifique.ma</div>
+        </div>
+      </div>
+      <div class="container">
+        <nav>
+          <div class="brand">Biotec<span>Scientifique</span></div>
+          <ul class="menu">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="produits.html">Nos Produits</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Services</h1>
+          <p>Des prestations techniques pour garantir la performance de vos instruments et la fiabilité de vos résultats.</p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="grid">
+          <div class="card">
+            <div class="badge">Installation</div>
+            <h3>Mise en service</h3>
+            <p>Installation, qualification IQ/OQ/PQ et formation opérateur.</p>
+          </div>
+          <div class="card">
+            <div class="badge">Maintenance</div>
+            <h3>Contrats & dépannage</h3>
+            <p>Maintenance préventive/curative, pièces d'origine et prêt d'équipement.</p>
+          </div>
+          <div class="card">
+            <div class="badge">Métrologie</div>
+            <h3>Étalonnage</h3>
+            <p>Calibrations avec certificats traçables pour pipettes, balances et thermomètres.</p>
+          </div>
+          <div class="card">
+            <div class="badge">Support</div>
+            <h3>Assistance scientifique</h3>
+            <p>Aide au choix, validation de méthodes et conformité réglementaire.</p>
+          </div>
+        </div>
+        <a class="cta" href="contact.html">Demander un devis</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+          <div>
+            <h3>Biotec Scientifique</h3>
+            <p>Votre partenaire de confiance pour le matériel de laboratoire professionnel.</p>
+          </div>
+          <div>
+            <h4>Coordonnées</h4>
+            <p>Magasin 2, Rce Ilyasse, Rue Méditerranéenne, Lot Riyad, Narjiss Route Sefrou Fès.</p>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <p>0666979824 · 0603379870<br/>contact@biotec-scientifique.ma</p>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">© 2024 Biotec Scientifique S.A.R.L. Tous droits réservés.</div>
+    </footer>
+  </body>
+</html>

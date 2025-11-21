@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiche produit | Micropipettes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#0891b2;--primary-dark:#0e7490;--text:#1f2937;--muted:#6b7280;--bg:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1000px;margin:0 auto;padding:0 20px}
+    header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 4px 30px rgba(0,0,0,.06)}
+    .top{background:linear-gradient(90deg,#e0f2fe,#bae6fd);color:#075985;font-size:14px}
+    .top .inner{display:flex;justify-content:space-between;align-items:center;padding:10px 0;gap:20px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:26px;background:linear-gradient(90deg,var(--primary),var(--primary-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .brand img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.05))}
+    nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+    .menu{list-style:none;display:flex;gap:28px}
+    .menu a{font-weight:600;position:relative;padding:8px 0}
+    .menu a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--primary),var(--primary-dark));border-radius:3px;transition:width .25s ease}
+    .menu a:hover{color:var(--primary)}
+    .menu a:hover::after{width:100%}
+    .hero{padding:60px 0 30px;background:radial-gradient(1000px 300px at 50% -50%, rgba(8,145,178,.15), transparent),#fff}
+    .hero h1{font-size:32px;color:var(--primary);font-weight:800;margin-bottom:8px}
+    .hero p{font-size:16px;color:var(--muted)}
+    .pdp{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;margin:24px 0}
+    .imgwrap{background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+    .imgwrap img{width:100%;height:100%;object-fit:cover}
+    .panel{background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06);padding:18px}
+    .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+    .meta div{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:10px}
+    .note{margin-top:14px;background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:12px;color:#334155;font-size:14px}
+    .back{display:inline-block;margin-top:14px}
+    .error{padding:20px;background:#fff;border:1px solid #fee2e2;color:#b91c1c;border-radius:12px}
+    @media(max-width:900px){.pdp{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div class="container inner">
+        <div>📞 0666979824 · 0603379870</div>
+        <div>✉️ contact@biotec-scientifique.ma</div>
+      </div>
+    </div>
+    <div class="container">
+      <nav>
+        <div class="brand"><img src="../../images/biotec-scientifique_logo.jpg" alt="Biotec Scientifique" />Biotec<span>Scientifique</span></div>
+        <ul class="menu">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../presentation.html">Présentation</a></li>
+          <li><a href="../produits.html">Nos Produits</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 id="title">Produit</h1>
+        <p id="subtitle">Fiche produit détaillée</p>
+      </div>
+    </section>
+
+    <section class="container" id="content"></section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <div>
+          <h3>Biotec Scientifique</h3>
+          <p>Votre partenaire de confiance pour le matériel de laboratoire professionnel.</p>
+        </div>
+        <div>
+          <h4>Coordonnées</h4>
+          <p>Magasin 2, Rce Ilyasse, Rue Méditerranéenne, Lot Riyad, Narjiss Route Sefrou Fès.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>0666979824 · 0603379870<br/>contact@biotec-scientifique.ma</p>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2024 Biotec Scientifique S.A.R.L. Tous droits réservés.</div>
+  </footer>
+
+  <script>
+    const DB = {
+      accumax: {
+        base: '../../assets/MICROPIPETTE/ACCUMAX/',
+        produits: {
+          'accumax-pro': { t: 'ACCUMAX PRO', img: 'ACCUMAX%20PRO.png' },
+          'accumax-smart': { t: 'ACCUMAX SMART', img: 'ACCUMAX%20SMART.jpeg' }
+        }
+      },
+      dragonlab: {
+        base: '../../assets/MICROPIPETTE/DRAGONLAB/',
+        produits: {
+          'dragon-lab': { t: 'DRAGON LAB', img: 'DRAGON%20LAB.png' }
+        }
+      },
+      onilab: {
+        base: '../../assets/MICROPIPETTE/ONILAB/',
+        produits: {
+          'onilab': { t: 'ONILAB', img: 'ONILAB.jpg' }
+        }
+      }
+    };
+
+    function html(strings, ...values){
+      return strings.reduce((acc, s, i) => acc + s + (values[i] ?? ''), '');
+    }
+
+    function render(){
+      const params = new URLSearchParams(location.search);
+      const marque = (params.get('marque')||'').toLowerCase();
+      const slug = (params.get('slug')||'').toLowerCase();
+      const db = DB[marque];
+      const item = db && db.produits[slug];
+      const title = document.getElementById('title');
+      const subtitle = document.getElementById('subtitle');
+      const content = document.getElementById('content');
+
+      if(!db || !item){
+        title.textContent = 'Produit introuvable';
+        subtitle.textContent = 'Vérifiez la marque et la référence.';
+        const back = marque ? `../micropipettes/${marque}.html` : '../micropipettes.html';
+        content.innerHTML = `<div class="error">Le produit demandé est introuvable. <a href="${back}">Retour</a>.</div>`;
+        document.title = 'Produit introuvable | Biotec Scientifique';
+        return;
+      }
+
+      title.textContent = `${item.t} — ${marque.toUpperCase()}`;
+      document.title = `${item.t} | ${marque.toUpperCase()} | Micropipettes`;
+
+      content.innerHTML = html`
+        <div class="pdp">
+          <div class="imgwrap">
+            <img src="${db.base + item.img}" alt="${item.t}" />
+          </div>
+          <div class="panel">
+            <h2>Informations</h2>
+            <div class="meta">
+              <div>
+                <strong>Marque</strong><br/>
+                ${marque.toUpperCase()}
+              </div>
+              <div>
+                <strong>Modèle</strong><br/>
+                ${item.t}
+              </div>
+            </div>
+            <div class="note">Infos utiles: données indicatives et non contractuelles. Pour toute demande spécifique (plages de volumes, packs, accessoires), merci de nous contacter.</div>
+            <a class="back" href="../micropipettes/${marque}.html">← Retour à ${marque.toUpperCase()}</a>
+          </div>
+        </div>`;
+    }
+
+    render();
+  </script>
+</body>
+</html>

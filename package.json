@@ -1,4 +1,8 @@
 {
+  "name": "biotec_scientifique",
+  "version": "0.0.1",
+  "author": "khm@med",
+  "owner": "biotec scientifique",
   "scripts": {
     "start": "servor --reload"
   },

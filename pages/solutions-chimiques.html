@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions chimiques | Biotec Scientifique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root{--primary:#0891b2;--primary-dark:#0e7490;--text:#1f2937;--muted:#6b7280;--bg:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%)}
+      *{box-sizing:border-box;margin:0;padding:0}
+      body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+      a{text-decoration:none;color:inherit}
+      .container{max-width:1200px;margin:0 auto;padding:0 20px}
+      header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 4px 30px rgba(0,0,0,.06)}
+      .top{background:linear-gradient(90deg,#e0f2fe,#bae6fd);color:#075985;font-size:14px}
+      .top .inner{display:flex;justify-content:space-between;align-items:center;padding:10px 0;gap:20px;flex-wrap:wrap}
+      .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:26px;background:linear-gradient(90deg,var(--primary),var(--primary-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+      .brand img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.05))}
+      nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+      .menu{list-style:none;display:flex;gap:28px}
+      .menu a{font-weight:600;position:relative;padding:8px 0}
+      .menu a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--primary),var(--primary-dark));border-radius:3px;transition:width .25s ease}
+      .menu a:hover{color:var(--primary)}
+      .menu a:hover::after{width:100%}
+      .hero{padding:72px 0 48px;background:radial-gradient(1000px 300px at 50% -50%, rgba(8,145,178,.15), transparent),#fff}
+      .hero h1{font-size:42px;color:var(--primary);font-weight:800;margin-bottom:12px}
+      .hero p{font-size:18px;color:var(--muted)}
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin:30px 0}
+      .card{background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden;border:1px solid rgba(255,255,255,.6);display:flex;flex-direction:column}
+      .thumb{height:160px;background:#f0f9ff}
+      .thumb img{width:100%;height:100%;object-fit:cover}
+      .card-body{padding:16px;display:flex;flex-direction:column;gap:6px}
+      .card h3{font-size:18px}
+      .meta{color:#6b7280;font-size:13px}
+      .btn{align-self:flex-start;margin-top:8px;background:linear-gradient(90deg,var(--primary),var(--primary-dark));color:#fff;padding:9px 12px;border:none;border-radius:12px;font-weight:700;cursor:pointer}
+      footer{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;margin-top:60px}
+      .footer-inner{padding:50px 0}
+      .copyright{border-top:1px solid rgba(255,255,255,.25);text-align:center;padding:16px 0;opacity:.9;font-size:14px}
+      @media (max-width:768px){.menu{display:none}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div class="container inner">
+          <div>📞 0666979824 · 0603379870</div>
+          <div>✉️ contact@biotec-scientifique.ma</div>
+        </div>
+      </div>
+      <div class="container">
+        <nav>
+          <div class="brand"><img src="../images/biotec-scientifique_logo.jpg" alt="Biotec Scientifique" />Biotec<span>Scientifique</span></div>
+          <ul class="menu">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="produits.html">Nos Produits</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Solutions chimiques</h1>
+          <p>Liste complète des solutions disponibles. Cliquez pour voir la fiche produit détaillée.</p>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="grid">
+          
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ACETONE.jpeg" alt="Acétone"></div>
+            <div class="card-body">
+              <h3>Acétone</h3>
+              <div class="meta">C3H6O · Pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=acetone">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ACIDE ACETIQUE.jpeg" alt="Acide acétique"></div>
+            <div class="card-body">
+              <h3>Acide acétique</h3>
+              <div class="meta">C2H4O2 · Pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=acide-acetique">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ACIDE CHLORYDRIQUE.jpeg" alt="Acide chlorhydrique"></div>
+            <div class="card-body">
+              <h3>Acide chlorhydrique</h3>
+              <div class="meta">HCL · 1N / 37% · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=acide-chlorhydrique">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ACIDE CITRIQUE.jpeg" alt="Acide citrique"></div>
+            <div class="card-body">
+              <h3>Acide citrique</h3>
+              <div class="meta">C6H8O7.H2O · 1N / 50% · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=acide-citrique">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ACIDE NIRIQUE.jpeg" alt="Acide nitrique"></div>
+            <div class="card-body">
+              <h3>Acide nitrique</h3>
+              <div class="meta">HNO3 �� 1N / 50% · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=acide-nitrique">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ACIDE SULFAMIQUE.jpeg" alt="Acide sulfamique"></div>
+            <div class="card-body">
+              <h3>Acide sulfamique</h3>
+              <div class="meta">NH2SO3H · Pur · 1 Kg</div>
+              <a class="btn" href="products/pdp.html?slug=acide-sulfamique">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ACIDE SULFURIQUE.jpeg" alt="Acide sulfurique"></div>
+            <div class="card-body">
+              <h3>Acide sulfurique</h3>
+              <div class="meta">H2SO3 · Pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=acide-sulfurique">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/AMMONIAQUE.jpeg" alt="Ammoniaque"></div>
+            <div class="card-body">
+              <h3>Ammoniaque</h3>
+              <div class="meta">NH4OH · 25% · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=ammoniaque">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/CHLORURE DE POTASIUM.jpeg" alt="Chlorure de potassium"></div>
+            <div class="card-body">
+              <h3>Chlorure de potassium</h3>
+              <div class="meta">KCL · Pur · 250 g</div>
+              <a class="btn" href="products/pdp.html?slug=chlorure-de-potassium">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/EAU OXYGENNE.jpeg" alt="Eau oxygénée"></div>
+            <div class="card-body">
+              <h3>Eau oxygénée</h3>
+              <div class="meta">H2O2 · 110 V · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=eau-oxygenee">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ETHANOL.jpeg" alt="Ethanol"></div>
+            <div class="card-body">
+              <h3>Ethanol</h3>
+              <div class="meta">C2H5OH · Pur · 1 Litre / 2,5 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=ethanol">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/ETHER ETHYLIQUE.jpeg" alt="Ether Ethylique"></div>
+            <div class="card-body">
+              <h3>Ether Ethylique</h3>
+              <div class="meta">C2H5OC2H5 · Pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=ether-ethylique">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/FORMALDEHIDE.jpeg" alt="Formaldéhyde"></div>
+            <div class="card-body">
+              <h3>Formaldéhyde</h3>
+              <div class="meta">CH2O · 37 % · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=formaldehyde">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/FORMAMIDE.jpeg" alt="Formamide"></div>
+            <div class="card-body">
+              <h3>Formamide</h3>
+              <div class="meta">HCONH2 · Pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=formamide">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/HUILE DE PARAFINE.jpeg" alt="Huile de paraffine"></div>
+            <div class="card-body">
+              <h3>Huile de paraffine</h3>
+              <div class="meta">Paraffine · Pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=huile-de-paraffine">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/HYDROXYDE DE POTASIUM.jpeg" alt="Hydroxyde de potassium"></div>
+            <div class="card-body">
+              <h3>Hydroxyde de potassium</h3>
+              <div class="meta">KOH · Pur, 1N, 30% · Pastilles / 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=hydroxyde-de-potassium">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/HYDROXYDE DE SODIUM.jpeg" alt="Hydroxyde de sodium"></div>
+            <div class="card-body">
+              <h3>Hydroxyde de sodium</h3>
+              <div class="meta">NAOH · 1N · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=hydroxyde-de-sodium">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/KOVACS.jpeg" alt="KOVACS"></div>
+            <div class="card-body">
+              <h3>KOVACS</h3>
+              <div class="meta">4-DMAB-ALCOOL-NBUTOL-HCL · Pur · 100 ML</div>
+              <a class="btn" href="products/pdp.html?slug=kovacs">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/METHANOL.jpeg" alt="Méthanol"></div>
+            <div class="card-body">
+              <h3>Méthanol</h3>
+              <div class="meta">CH4O · Pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=methanol">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/OXALATE D'AMMONIUM.jpeg" alt="Oxalate d'ammonium"></div>
+            <div class="card-body">
+              <h3>Oxalate d'ammonium</h3>
+              <div class="meta">C2H8N204.H2O · 3% · 250 ML</div>
+              <a class="btn" href="products/pdp.html?slug=oxalate-d-ammonium">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/TAMPON PH 7.jpeg" alt="TAMPON PH 7"></div>
+            <div class="card-body">
+              <h3>TAMPON PH 7</h3>
+              <div class="meta">KH2P04-NA2HPO4 · Pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=tampon-ph-7">Voir la fiche</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="../assets/solution_chimique/images/TOLUENE.jpeg" alt="Toluène"></div>
+            <div class="card-body">
+              <h3>Toluène</h3>
+              <div class="meta">C7H8 · pur · 1 Litre</div>
+              <a class="btn" href="products/pdp.html?slug=toluene">Voir la fiche</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+          <div>
+            <h3>Biotec Scientifique</h3>
+            <p>Votre partenaire de confiance pour le matériel de laboratoire professionnel.</p>
+          </div>
+          <div>
+            <h4>Coordonnées</h4>
+            <p>Magasin 2, Rce Ilyasse, Rue Méditerranéenne, Lot Riyad, Narjiss Route Sefrou Fès.</p>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <p>0666979824 · 0603379870<br/>contact@biotec-scientifique.ma</p>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">© 2024 Biotec Scientifique S.A.R.L. Tous droits r��servés.</div>
+    </footer>
+  </body>
+</html>

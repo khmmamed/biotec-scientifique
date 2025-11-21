@@ -6,7 +6,7 @@ description: Add epic description here...
 status: planned
 created_at: 2025-11-10T15:06:24.172Z
 updated_at: 2025-11-10T15:06:24.172Z
-totalTasks: 1
+totalTasks: 2
 completedTasks: 0
 waitingTasks: 0
 startedTasks: 0
@@ -20,6 +20,11 @@ tasks:
     status: waiting
     priority: high
     path: '../Tasks/[Task]_add-pages_[Epic]_website-template.md'
+  - _id: tsk_add-categoies-photos
+    title: add-categoies-photos
+    status: waiting
+    priority: high
+    path: '../Tasks/[Task]_add-categoies-photos_[Epic]_website-template.md'
 related_epics: null
 ---
 
@@ -50,6 +55,7 @@ Add implementation notes here...
 | # | Task | Status | Priority | ID |
 |:--|:-----|:------:|:--------:|:-----|
 | 1 | [add-pages](../Tasks/[Task]_add-pages_[Epic]_website-template.md) | ⏳ waiting | 🔴 high | `tsk_add-pages` |
+| 2 | [add-categoies-photos](../Tasks/[Task]_add-categoies-photos_[Epic]_website-template.md) | ⏳ waiting | 🔴 high | `tsk_add-categoies-photos` |
 <!-- Tasks will be added here automatically -->
 
 
